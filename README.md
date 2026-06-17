@@ -4,7 +4,7 @@
 
 This project is an exploratory SQL and data visualization analysis of global COVID-19 trends using historical data from 2020–2021.
 
-Using SQL, I analyzed infection rates, death counts, and fatality trends across countries and continents to better understand the global impact of the pandemic during its early stages.
+Using MySQL for data cleaning and analysis, I explored infection rates, death counts, fatality trends, and vaccination rollouts across countries and continents to better understand the global impact of COVID-19 during its early stages.
 
 This was one of my earlier analytics projects and has been cleaned and organized for portfolio purposes.
 
@@ -23,6 +23,7 @@ The dataset includes global daily COVID-19 statistics such as:
 * Population
 * Infection percentages
 * Fatality percentages
+* Vaccination counts
 
 ---
 
@@ -40,15 +41,26 @@ The primary goals of this analysis were:
 
 ## Tools Used
 
-* SQL (MySQL)
+* MySQL
 * Tableau
 * Git / GitHub
 
 ---
 
+## Data Cleaning & Preparation
+
+Before analysis, the dataset required several cleaning steps:
+
+* Converted date columns into SQL date format
+* Replaced blank values with `NULL`
+* Standardized numeric columns for calculations
+* Validated cleaned tables before analysis
+
+---
+
 ## SQL Concepts Used
 
-This project involved heavy use of SQL for cleaning and analysis, including:
+This project involved SQL for cleaning and analysis, including:
 
 * SELECT statements
 * Filtering (`WHERE`)
@@ -57,7 +69,6 @@ This project involved heavy use of SQL for cleaning and analysis, including:
 * Joins
 * CTEs
 * Window Functions
-* Temporary Tables
 * Views
 
 ---
@@ -82,14 +93,21 @@ This project involved heavy use of SQL for cleaning and analysis, including:
 * Death counts by continent
 * Death rates by continent
 
+### Vaccination Analysis
+
+* Rolling vaccinations by country
+* Vaccination totals by continent
+* Global vaccination trends over time
+
 ---
 
 ## Key Findings
 
-* Infection rates varied significantly between countries, with some countries experiencing substantially higher case penetration relative to population.
-* Countries with the highest total death counts were not always the same as those with the highest death rates per capita.
-* Regional differences highlighted major disparities in healthcare capacity, population density, and pandemic response.
-* Global fatality rates changed significantly over time as testing, treatment, and reporting improved.
+* Andorra recorded one of the highest infection rates by 2021, with approximately **17% of the population infected**.
+* The United States recorded the highest total death count, with approximately **576,232 deaths** by 2021.
+* Hungary had one of the highest death rates relative to population, at roughly **0.29%**.
+* Global daily deaths showed a downward trend by 2021 compared to the major peaks observed in 2020.
+* Vaccination rollouts generally occurred in waves, with large initial spikes followed by slower distribution periods.
 
 ---
 
@@ -103,4 +121,4 @@ This project involved heavy use of SQL for cleaning and analysis, including:
 
 ## Dashboard
 
-Tableau visualizations were created to present the SQL analysis results and highlight global trends.
+Tableau visualizations were created to present SQL query outputs and highlight global COVID-19 trends.
